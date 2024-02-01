@@ -1,6 +1,8 @@
 <?php
 
-use App\Http\Controllers\PageController as MovieController;
+use App\Http\Controllers\PageController as PageController;
+use App\Http\Controllers\Guest\MovieController as MovieController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [MovieController::class, 'index']);
+Route::get('/', [PageController::class, 'index']);
+Route::get('/movie', [MovieController::class, 'index']);
+
